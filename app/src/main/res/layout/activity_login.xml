@@ -77,5 +77,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_response" />
+
+        <Spinner
+            android:id="@+id/spnRego"
+            android:layout_width="402dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="45dp"
+            app:entries="@{loginviewmodel.quantityEntries}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
     </android.support.constraint.ConstraintLayout>
 </layout>
