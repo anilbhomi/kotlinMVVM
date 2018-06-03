@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
-        <variable name="data"
+
+        <variable
+            name="data"
             type="com.example.ebpearls.kotlinmvvm.recyclerview.Model" />
+
+        <variable
+            name="handler"
+            type="com.example.ebpearls.kotlinmvvm.recyclerview.itemClickHandler"/>
+
     </data>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        android:layout_width="match_parent" android:layout_height="wrap_content">
+        android:orientation="vertical">
 
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        <CheckBox
+            android:id="@+id/my_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="@{data.location}"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:onClick="@{(v)-> handler.onItemClick(myView)}" />
     </LinearLayout>
 
 </layout>
